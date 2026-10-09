@@ -1,0 +1,56 @@
+.boardPage {
+    .heading { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:24px;
+        h1 { margin-top:6px; font-size:clamp(36px,5vw,56px); font-weight:650; line-height:1.06; letter-spacing:-.045em; }
+        > div > p:last-child { margin-top:8px; color:var(--muted); }
+    }
+    .label { color:var(--accent); font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .newCard,.submit { min-height:40px; display:flex; align-items:center; gap:7px; padding:0 13px; border:0; border-radius:7px; color:#13231f; background:var(--accent); font-size:11px; font-weight:750;
+        &:hover { box-shadow:0 4px 16px #70d6bc33; }
+    }
+    .boardToolbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; color:var(--muted); font-size:10px;
+        > div { display:flex; gap:12px; } strong { color:var(--ink); } button { display:flex; align-items:center; gap:6px; border:0; color:var(--accent); background:transparent; font-size:10px; }
+    }
+    .addForm { display:flex; align-items:flex-end; gap:12px; margin-bottom:16px; padding:13px; border:1px solid var(--line); border-radius:8px; background:var(--card);
+        > div { position:static; display:flex; align-items:center; justify-content:space-between; align-self:center; flex:1; min-width:110px; color:var(--muted); font-size:10px; }
+        label { display:grid; flex:1; gap:4px; color:var(--muted); font-size:9px; }
+        input,select { height:34px; padding:0 8px; border:1px solid var(--line); border-radius:5px; color:var(--ink); background:#101a27; font-size:10px; }
+    }
+    .columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; align-items:start; }
+    .column { min-width:0; min-height:430px; padding:12px; border:1px solid var(--line); border-radius:9px; background:#151e2b;
+        > header { display:flex; justify-content:space-between; align-items:center; padding:2px 2px 12px; border-bottom:1px solid var(--line);
+            > div:first-child { display:flex; align-items:center; gap:8px; } h2 { font-size:12px; font-weight:700; } small { padding:2px 6px; border-radius:10px; color:var(--muted); background:#222e40; font-size:9px; }
+        }
+    }
+    .columnDot { width:7px; height:7px; border-radius:50%; background:#8092ad; }
+    .doing { background:#e7bd70; } .done { background:#70d6bc; }
+    .menuWrap { position:relative; }
+    .menuButton { width:29px; height:29px; display:grid; place-items:center; border:0; border-radius:6px; color:var(--muted); background:transparent; &:hover { color:var(--ink); box-shadow:0 2px 8px #70d6bc25; } }
+    .menu { position:absolute; z-index:10; top:34px; right:0; width:180px; padding:5px; border:1px solid var(--line); border-radius:8px; background:#202b3b; box-shadow:0 12px 25px #0005;
+        button { width:100%; min-height:33px; display:flex; align-items:center; gap:8px; padding:0 8px; border:0; border-radius:5px; color:var(--ink); background:transparent; text-align:left; font-size:10px; &:hover { background:#2c394b; } }
+    }
+    .cardStack { display:grid; gap:9px; margin-top:11px; }
+    .card { padding:11px; border:1px solid #303d50; border-radius:7px; background:var(--card); cursor:grab;
+        &:active { cursor:grabbing; }
+        h3 { margin-top:8px; font-size:11px; font-weight:650; line-height:1.5; }
+    }
+    .cardTop,.cardBottom { display:flex; align-items:center; justify-content:space-between; gap:6px; }
+    .cardTop > span { padding:3px 6px; border-radius:4px; color:#bed0e4; background:#283548; font-size:8px; }
+    .cardTop button,.cardBottom > button { width:24px; height:24px; display:grid; place-items:center; border:0; border-radius:4px; color:var(--muted); background:transparent; &:hover { color:var(--accent); box-shadow:0 2px 7px #70d6bc20; } }
+    .cardBottom { margin-top:13px; padding-top:8px; border-top:1px solid #303d50;
+        small { color:var(--muted); font-size:9px; }
+        select { max-width:94px; height:25px; padding:0 4px; border:1px solid #344257; border-radius:4px; color:var(--muted); background:#131d2a; font-size:8px; }
+    }
+    .addInColumn { width:100%; min-height:34px; display:flex; align-items:center; gap:7px; margin-top:9px; padding:0 8px; border:1px dashed #39485b; border-radius:6px; color:var(--muted); background:transparent; font-size:10px;
+        &:hover { color:var(--accent); border-color:var(--accent); box-shadow:0 2px 8px #70d6bc20; }
+    }
+    .modal { position:fixed; z-index:40; inset:0; display:grid; place-items:center; padding:20px; background:#080d16bb;
+        section { width:min(380px,100%); padding:24px; border:1px solid var(--line); border-radius:9px; background:var(--card); }
+        > section > svg { color:var(--accent); } h2 { margin-top:10px; font-size:19px; } p { margin-top:6px; color:var(--muted); font-size:12px; }
+        section > div { display:flex; justify-content:flex-end; gap:8px; margin-top:19px; }
+        button { min-height:35px; padding:0 11px; border:1px solid var(--line); border-radius:5px; color:var(--ink); background:transparent; font-size:10px; }
+        button:last-child { border-color:#bc655f; color:white; background:#bc655f; }
+    }
+    .srOnly { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+    @media(max-width:800px) { .columns { grid-template-columns:1fr; } .column { min-height:auto; } }
+    @media(max-width:600px) { .heading { align-items:flex-start; flex-direction:column; } .boardToolbar > div { flex-direction:column; gap:2px; } .addForm { align-items:stretch; flex-direction:column; } .addForm label { width:100%; } }
+}
