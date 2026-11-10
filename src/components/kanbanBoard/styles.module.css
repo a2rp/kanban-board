@@ -10,6 +10,7 @@
     .boardToolbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; color:var(--muted); font-size:10px;
         > div { display:flex; gap:12px; } strong { color:var(--ink); } button { display:flex; align-items:center; gap:6px; border:0; color:var(--accent); background:transparent; font-size:10px; }
     }
+    .storageWarning { margin:0 0 14px; padding:10px 12px; border:1px solid #b6843d; border-radius:6px; color:#f2d7a1; background:#342918; font-size:11px; line-height:1.5; }
     .addForm { display:flex; align-items:flex-end; gap:12px; margin-bottom:16px; padding:13px; border:1px solid var(--line); border-radius:8px; background:var(--card);
         > div { position:static; display:flex; align-items:center; justify-content:space-between; align-self:center; flex:1; min-width:110px; color:var(--muted); font-size:10px; }
         label { display:grid; flex:1; gap:4px; color:var(--muted); font-size:9px; }

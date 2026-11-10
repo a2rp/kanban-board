@@ -14,7 +14,7 @@ Add cards to a chosen column, then edit their title or label. Drag cards between
 
 ## Data and limits
 
-Cards and their column assignments are saved in localStorage for this browser. The board does not sync or support multiple users.
+Cards and their column assignments are saved in localStorage for this browser. The board does not sync or support multiple users. If saved data cannot be read or browser storage is blocked, the app leaves existing data untouched and warns that new changes may not persist.
 
 ## Run locally
 
